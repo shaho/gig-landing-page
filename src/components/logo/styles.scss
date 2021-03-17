@@ -1,0 +1,8 @@
+.logo {
+  order: 6 !important;
+  background: #4b5563 !important;
+  color: #fff;
+  @media all and (max-width: 768px) {
+    order: 1 !important;
+  }
+}
