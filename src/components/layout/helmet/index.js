@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 
-import favicon from "@assets/img/favicon.ico";
-
 export default function HelmetProvider({ lang }) {
   return (
     <Helmet>
@@ -13,7 +11,6 @@ export default function HelmetProvider({ lang }) {
         name="keywords"
         content="GiG, iGaming solutions, Gaming Innovation Group"
       />
-      <link rel="shortcut icon" type="image/ico" href={`${favicon}`} />
     </Helmet>
   );
 }

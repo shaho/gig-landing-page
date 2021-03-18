@@ -5,7 +5,14 @@ import PropTypes from "prop-types";
 import { listCompanyOffices, listCompanyValues } from "@services";
 import { getRandomNumber } from "@helpers";
 
-export const GigContext = createContext();
+export const GigContext = createContext({
+  offices: [],
+  companyValues: [],
+  monochrome: false,
+  lang: "en",
+  rotateText: false,
+  actions: {},
+});
 
 export function GigProvider({ children }) {
   const [offices, setOffices] = useState([]);

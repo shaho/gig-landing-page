@@ -4,7 +4,7 @@ import Layout from "@components/layout";
 export default function PageNotFound() {
   return (
     <Layout>
-      <div class="not-found">
+      <div className="not-found">
         <div className="inner">
           <h1>
             Not found <span>:(</span>

@@ -1,7 +1,7 @@
 {
   "name": "gig-landing-page",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "GiG Media Front-End test implemented in Gatsby.js",
   "version": "0.1.0",
   "license": "MIT",
   "keywords": [
@@ -16,7 +16,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest --coverage --passWithNoTests"
   },
   "dependencies": {
     "gatsby": "^3.0.1",
@@ -30,7 +30,13 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "babel-jest": "^26.6.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "prettier": "2.2.1",
+    "react-test-renderer": "^17.0.1"
   },
   "repository": {
     "type": "git",

@@ -6,9 +6,9 @@ import "./styles.scss";
 export default function Card({
   title,
   description,
-  color,
-  rotate,
-  monochrome,
+  color = "color-1",
+  rotate = false,
+  monochrome = false,
 }) {
   return (
     <div
@@ -25,7 +25,7 @@ export default function Card({
 Card.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  rotate: PropTypes.bool.isRequired,
-  monochrome: PropTypes.bool.isRequired,
+  color: PropTypes.string,
+  rotate: PropTypes.bool,
+  monochrome: PropTypes.bool,
 };
