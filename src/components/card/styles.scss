@@ -1,0 +1,54 @@
+@import "/src/assets/styles/mixins";
+
+%same-width {
+  @media all and (min-width: 960px) {
+    flex: 1;
+  }
+}
+
+.card {
+  position: relative;
+  display: inherit;
+
+  flex: 0 0 33.333334%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: auto;
+  border: 1px solid #fff;
+  padding: 10px;
+  transition: all 300ms linear;
+
+  h2,
+  p {
+    text-align: center;
+  }
+  &.rotate {
+    h2,
+    p {
+      // transition: all 0.5s linear;
+      transform: rotate(180deg);
+    }
+  }
+
+  @media all and (max-width: 960px) {
+    min-height: 200px;
+  }
+  @media all and (max-width: 768px) {
+    flex: 0 0 100%;
+  }
+
+  /* Generate necessary colors */
+  @for $i from 0 to 15 {
+    &:nth-child(#{$i}) {
+      order: #{$i};
+      @if $i > 6 {
+        @extend %same-width;
+      }
+    }
+    &.color-#{$i} {
+      @include generate-random-bg();
+    }
+  }
+}

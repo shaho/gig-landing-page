@@ -1,0 +1,212 @@
+$base-color: #262626;
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+  width: 17rem;
+  padding: 8rem 2rem;
+  background: #effffa;
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: -8px -1px 4px -5px rgba(110, 103, 103, 0.5);
+
+  @media (max-width: 576px) {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  section {
+    margin-bottom: 1rem;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  top: 5%;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  z-index: 101;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+    background: white;
+  }
+}
+
+.close-menu {
+  :first-child {
+    transform: rotate(0);
+  }
+  :nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  :nth-child(3) {
+    transform: rotate(0);
+  }
+}
+
+.open-menu {
+  :first-child {
+    background: $base-color;
+    transform: rotate(45deg);
+  }
+
+  :nth-child(2) {
+    background: $base-color;
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  :nth-child(3) {
+    background: $base-color;
+    transform: rotate(-45deg);
+  }
+}
+
+.btn {
+  text-decoration: none;
+  color: $base-color;
+  width: 200px;
+  border: 4px solid $base-color;
+  padding: 15px 30px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: $base-color;
+  }
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.btn::before {
+  top: -5px;
+  left: 10%;
+}
+
+.btn:hover::before {
+  left: 80%;
+}
+
+.btn::after {
+  top: calc(100% - 1px);
+  left: 80%;
+}
+
+.btn::after {
+  left: 10%;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 200px;
+
+  &::after {
+    color: black;
+    content: "▾";
+    margin-right: 10px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    font-size: 20px;
+  }
+
+  .select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: white;
+    border: none;
+    border: 4px solid $base-color;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    &:focus {
+      color: black;
+    }
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+/* Credit: https://codepen.io/nikkz/pen/BzVBJo */
+.checkbox-wrapper {
+  display: block;
+  margin: 10px 0;
+
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 3px solid $base-color;
+      padding: 10px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+  }
+
+  input:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid $base-color;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}

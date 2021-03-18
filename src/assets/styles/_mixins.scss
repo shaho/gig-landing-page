@@ -1,0 +1,11 @@
+/* Random BG Generator*/
+@mixin generate-random-bg() {
+  // put color outside mixin
+  $color: rgb(random(255), random(255), random(255));
+
+  background-color: $color;
+
+  &.monochrome {
+    background-color: desaturate($color, 100%);
+  }
+}

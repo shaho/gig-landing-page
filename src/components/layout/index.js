@@ -1,7 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return <div className="wrapper">{children}</div>;
-};
+}
 
-export default Layout;
+Layout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
