@@ -39,13 +39,13 @@ export default function HambergerMenu({
         }}
       >
         <section>
-          <button className="btn" onClick={actions.randomizeColors}>
+          <button className="btn random-btn" onClick={actions.randomizeColors}>
             Randomize Color
           </button>
         </section>
 
         <section>
-          <button className="btn" onClick={actions.handleMonochrome}>
+          <button className="btn mono-btn" onClick={actions.handleMonochrome}>
             Monochrome is {monochromed ? "on" : "off"}
           </button>
         </section>

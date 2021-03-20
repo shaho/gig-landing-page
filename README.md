@@ -12,7 +12,7 @@ Make sure you have already installed Node.js and the latest
 
 **NOTE** <br/>
 
-> There are two enviironment files (`.env.development` and `.env.production`)
+> There are two environment files (`.env.development` and `.env.production`)
 > which typicaly should be excluded with source code in .gitignore file, but
 > here intentionally and for the sake of example, I have pushed them with whole
 > repo. <br/><br/>
@@ -21,7 +21,7 @@ Make sure you have already installed Node.js and the latest
 
 1.  **Development**
 
-    Clone the repo and just run below command
+    Clone the repo and just run command below
 
     ```shell
     $ yarn && yarn start
@@ -29,15 +29,11 @@ Make sure you have already installed Node.js and the latest
 
 2.  **Test**
 
-    run:
-
     ```shell
     $ yarn test
     ```
 
 3.  **Production**
-
-    run:
 
     ```shell
     $ gatsby build && gatsby serve
@@ -84,19 +80,17 @@ A quick look at the files and directories you'll see in the current project.
     ├── .prettierrc
     ├── gatsby-browser.js
     ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
     ├── LICENSE
-    ├── package-lock.json
+    ├── yarn-lock.json
     ├── package.json
     └── README.md
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that
-    your project depends on (npm packages) are automatically installed.
+    the project depends on (npm packages) are automatically installed.
 
 2.  **`/src`**: This directory will contain all of the code related to what you
-    will see on the front-end of your site (what you see in the browser) such as
-    your site logo or a page template. `src` is a convention for “source code”.
+    will see on the front-end of the site (what you see in the browser) such as
+    site logo or a page template. `src` is a convention for “source code”.
 
 3.  **`/src/assets`**: This directory will contain all of the code related to
     styling the App handled by [SASS](https://sass-lang.com/)
@@ -125,33 +119,31 @@ A quick look at the files and directories you'll see in the current project.
 
 11. **`.prettierrc`**: This is a configuration file for
     [Prettier](https://prettier.io/). Prettier is a tool to help keep the
-    formatting of your code consistent.
+    formatting of the code consistent.
 
 12. **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage
     of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/)
     (if any). These allow customization/extension of default Gatsby settings
-    affecting the browser. ere I wrapp the entire App with `Context` API in
+    affecting the browser. Here I wrapped the entire App with `Context` API in
     order to share App state across different components.
 
 13. **`gatsby-config.js`**: This is the main configuration file for a Gatsby
-    site. This is where you can specify information about your site (metadata)
+    site. This is where we can specify information about your site (metadata)
     like the site title and description, which Gatsby plugins you’d like to
     include, etc. (Check out the
     [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more
     detail).
 
-14. **`LICENSE`**: This Gatsby starter is licensed under the MIT license. This
-    means that you can see this file as a placeholder and replace it with your
-    own license.
+14. **`LICENSE`**: This repo is licensed under the MIT license.
 
 15. **`yarn-lock.json`** (See `package.json` below, first). This is an
-    automatically generated file based on the exact versions of your yarn
-    dependencies that were installed for your project. **(You won’t change this
+    automatically generated file based on the exact versions of the yarn
+    dependencies that were installed for the project. **(You won’t change this
     file directly).**
 
 16. **`package.json`**: A manifest file for Node.js projects, which includes
     things like metadata (the project’s name, author, etc). This manifest is how
-    npm knows which packages to install for your project.
+    npm knows which packages to install for the project.
 
 17. **`README.md`**: A text file containing useful reference information about
-    your project.
+    the project.

@@ -2,6 +2,11 @@
   "name": "gig-landing-page",
   "private": true,
   "description": "GiG Media Front-End test implemented in Gatsby.js",
+  "author": {
+    "name": "Shaho Toofani",
+    "email": "toofani@gmail.com",
+    "url": "http://shaho.info/"
+  },
   "version": "0.1.0",
   "license": "MIT",
   "keywords": [
