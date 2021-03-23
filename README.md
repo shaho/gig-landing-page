@@ -13,9 +13,7 @@ Make sure you have already installed Node.js and the latest
 **NOTE** <br/>
 
 > There are two environment files (`.env.development` and `.env.production`)
-> which typicaly should be excluded with source code in .gitignore file, but
-> here intentionally and for the sake of example, I have pushed them with whole
-> repo. <br/><br/>
+> create `.env.development` file and then use your own API url and token to get the app up and running.
 
 ## 🚀 Quick start
 
